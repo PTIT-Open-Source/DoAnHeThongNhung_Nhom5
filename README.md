@@ -13,8 +13,7 @@ Hiện nay, tình trạng lạm dụng rượu bia đang là một trong những
 - [Cách Sử Dụng](#cách-sử-dụng)
 - [Kiểm Thử](#kiểm-thử)
 - [Ảnh/Video Demo](#ảnhvideo-demo)
-- [Đóng Góp](#đóng-góp)
-- [Giấy Phép](#giấy-phép)
+
 
 ---
 
@@ -53,8 +52,10 @@ Thiết bị đo nồng độ cồn trong hơi thở, hiển thị kết quả t
 | ESP32 DevKit v1    | 1        | Vi điều khiển chính         |
 | Cảm biến MQ3       | 1        | Đo nồng độ cồn             |
 | Màn hình OLED      | 1        | Hiển thị kết quả           |
-| Nút nhấn           | 3        | Chọn chế độ và reset       |
-
+| Nút nhấn           | 5        | Chọn chế độ và reset       |
+| IC ổn áp LM7805    | 1        | Hạ áp cho đầu ra là 5v     |
+| IC ổn áp AMS1117   | 1        | Ổn áp cho 3.3v             |
+| Tụ và trở          | nhiều    | Tham khảo sch và pcb       |
 ---
 
 ## Sơ Đồ Nguyên Lý và PCB
@@ -82,7 +83,23 @@ Thiết bị đo nồng độ cồn trong hơi thở, hiển thị kết quả t
 ## Lập Trình Firmware
 
 - **Ngôn ngữ**: C++ (Arduino).  
-- **File chính**: `main.ino` (trang 26-30 trong báo cáo).  
-- **Cách nạp**:  
-  ```bash
-  platformio run --target upload
+- **File chính**: `DOANNHUNG.ino`.  
+- **Cách nạp**:  Su dung UART
+
+---
+ 
+## Cách sử dụng
+
+1. Nhấn nút reset
+2. Chọn chế độ bằng các nút nhấn cho ô tô và xe máy
+3. Thổi nồng độ cồn
+4. Trả kết quả lên LCD, hiển thị lên web
+
+---
+
+## Ảnh thực tế
+![image](https://github.com/user-attachments/assets/5e3656e4-737d-495d-84a6-5baa2211626f)
+![image](https://github.com/user-attachments/assets/24feb2a8-391a-4f78-b211-3e711925d8ab)
+! Hình ảnh mang tính chất minh họa do lấy ảnh cũ.
+
+---
