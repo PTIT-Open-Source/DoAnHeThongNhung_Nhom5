@@ -38,7 +38,7 @@ Thiết bị đo nồng độ cồn trong hơi thở, hiển thị kết quả t
 | Thành phần      | Thông tin                          |
 |-----------------|------------------------------------|
 | MCU             | ESP32-WROOM-32                    |
-| Nguồn vào       | pin Lithium 3.7V  |
+| Nguồn vào       | 3 pin Lithium 3.7V  |
 | Cảm biến        | MQ3 (đo nồng độ cồn)              |
 | Màn hình        | OLED SSD1306 128x64, giao tiếp I2C|
 | Kết nối         | WiFi, MQTT                        |
